@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style=" text-align: center">Activity_03</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Add Student</h2>
+            <form id="addStudentForm">
+                <label for="student_id">Student ID:</label>
+                <input type="text" id="student_id" name="student_id" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="program">Program:</label>
+                <input type="text" id="program" name="program" required>
+                <label for="year_level">Year Level:</label>
+                <input type="text" id="year_level" name="year_level" required>
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>All Students</h2>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Program</th>
+                        <th>Year Level</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsList"></tbody>
+            </table>
+        </div>
+
+        <div class="card" id="editStudentCard" style="display: none;">
+            <h2>Edit Student</h2>
+            <form id="editStudentForm">
+                <input type="text" id="edit_student_id" name="edit_student_id">
+                <label for="edit_name">Name:</label>
+                <input type="text" id="edit_name" name="edit_name" required>
+                <label for="edit_program">Program:</label>
+                <input type="text" id="edit_program" name="edit_program" required>
+                <label for="edit_year_level">Year Level:</label>
+                <input type="text" id="edit_year_level" name="edit_year_level" required>
+                <button type="submit">Update Student</button>
+                <button type="button" id="cancelEdit">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
